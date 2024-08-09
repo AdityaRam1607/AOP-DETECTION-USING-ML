@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>AIR OVER PRESSURE DETECTION IN MINES</h1>
+    </header>
+
+    <!-- Form Container -->
+    <div class="container">
+        <!-- Form -->
+        <div class="form-container">
+            <h2>Predict Aop (dB)</h2>
+            <form id="aopForm">
+                <label for="hole_dia">Hole Diameter (mm):</label>
+                <input type="number" id="hole_dia" name="hole_dia" required><br><br>
+                
+                <label for="num_holes">Number of Holes:</label>
+                <input type="number" id="num_holes" name="num_holes" required><br><br>
+                
+                <label for="hole_depth">Hole Depth (m):</label> 
+                <input type="number" id="hole_depth" name="hole_depth" required><br><br>
+                
+                <label for="burden_spacing">Burden Spacing (m):</label>
+                <input type="number" id="burden_spacing" name="burden_spacing" required><br><br>
+                
+                <label for="deck">Deck (m):</label>
+                <input type="number" id="deck" name="deck" required><br><br>
+                
+                <label for="top_stemming">Top Stemming (m):</label>
+                <input type="number" id="top_stemming" name="top_stemming" required><br><br>
+                
+                <label for="avg_explosive">Average Explosive Weight:</label>
+                <input type="number" id="avg_explosive" name="avg_explosive" required><br><br>
+                
+                <label for="total_explosives_weight">Total Explosives Weight:</label>
+                <input type="number" id="total_explosives_weight" name="total_explosives_weight" required><br><br>
+                <div class="sub">
+                <button type="submit">Predict</button></div>
+            </form>
+        </div>
+        
+        <!-- Table -->
+        <table>
+            <tr>
+                <th>AOP Limit: 120 dB(IND), 136 dB(US)</th>
+                <th>Consequences if Crossed</th>
+            </tr>
+            <tr>
+                <td>120 dB</td>
+                <td>Ear bleeding and hearing loss</td>
+            </tr>
+            <tr>
+                <td>140-145 dB</td>
+                <td>Failure of badly installed window panes</td>
+            </tr>
+            <tr>
+                <td>Over 168 dB</td>
+                <td>Failure of correctly installed window panes</td>
+            </tr>
+            <tr>
+                <td>176 dB</td>
+                <td>Structural damage</td>
+            </tr>
+            <tr>
+                <td>180 dB</td>
+                <td>Plaster cracks</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="pred">
+        Blast Air Noise:
+        <div id="predictionResult"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

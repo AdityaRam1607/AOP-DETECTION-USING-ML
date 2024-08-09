@@ -1,0 +1,108 @@
+/* Apply general styles to the body */
+body {
+    background-image: url('mines.jpg'); /* Add background image */
+    background-size: cover; /* Cover the entire background */
+    font-family: Arial, sans-serif; /* Use a common font */
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+header {
+    background-color: #2b2a2a; /* Green background color */
+    color: white; /* White text color */
+    padding: 20px;
+    text-align: center; /* Center-align text */
+}
+
+/* Style the form container */
+.form-container {
+    margin: 50px auto; /* Center the form container horizontally */
+    margin-left: 35%;
+    width: 400px; /* Set the width of the form container */
+    padding: 6px;
+    background-color: rgba(255, 255, 255, 0.7); /* Transparent background */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+    float: left; /* Float left to display inline */
+}
+table {
+    width: 20%; /* Set the width of the table */
+    height: 40%;
+    margin-right: 10%;
+    margin-top: 25%;
+    border-collapse: separate;
+    background-color: rgba(255, 255, 255, 0.7); /* Transparent background */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+    float: left; /* Float left to display inline */
+}
+
+/* Style for table headers */
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 2px;
+}
+
+/* Style for table data cells */
+td {
+    border-bottom: 1px solid #ddd;
+    padding: 2px;
+}
+
+.container {
+    display: flex; /* Use flexbox to align items */
+    justify-content: center; /* Center-align items horizontally */
+    margin-top: 20px; /* Add some margin at the top */
+}
+
+/* Style form elements */
+input[type="number"]{
+    width: 100%; /* Make inputs and button full-width */
+    height: 30px;
+    margin-bottom: 1px;
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add rounded corners */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+.sub{
+    display: flex;  
+justify-content: center; 
+padding-bottom: 4px;
+}
+button[type="submit"] {
+    
+    width: 50%; /* Make inputs and button full-width */
+    height: 40px;
+    padding: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add rounded corners */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    background-color: #006eff; /* Green background color */
+    color: white; /* White text color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    
+}
+
+
+/* Change button color on hover */
+button[type="submit"]:hover {
+    background-color: #004455;
+}
+
+.pred{
+    margin: 50px auto; /* Center the form container horizontally */
+    width: 400px; /* Set the width of the form container */
+    padding: 6px;
+    background-color: rgba(255, 255, 255, 0.7); /* Transparent background */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+    height: 40px;
+}
+
+
+
+

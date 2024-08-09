@@ -6,22 +6,22 @@ from sklearn.svm import SVR
 import joblib
 
 # Load data
-cell_df = pd.read_csv('sdp1.xlsx - Sheet1.csv')
+cell_df = pd.read_csv('abc.csv')
 
 # Data preprocessing
 # CONVERTING TOTAL EXPLOSIVES WEIGHT OBJECT TO INT
 
-cell_df['Total explosives weight'] = cell_df['Total explosives weight'].str.replace(',', '')
-cell_df['Total explosives weight'] = cell_df['Total explosives weight'].astype(int)
+cell_df['explosives weight'] = cell_df['explosives weight'].str.replace(',', '')
+cell_df['explosives weight'] = cell_df['explosives weight'].astype(int)
 
 
 # CONVERTING BURDEN x SPACING OBJECT TO INT
 
-cell_df['Burden × Spacing [m]'] = cell_df['Burden × Spacing [m]'].fillna(0).astype(int)
+cell_df['Burden × Spacing'] = cell_df['Burden × Spacing'].fillna(0).astype(int)
 
 # prompt: i want to replace the nan values with 0 in deck
 
-cell_df['Deck    [m]'] = cell_df['Deck    [m]'].fillna(0)
+cell_df['Deck'] = cell_df['Deck'].fillna(0)
 
 # REMOVING NAN VALUES IN AOP
 cell_df['AOP'] = cell_df['AOP'].fillna(0)
@@ -34,7 +34,7 @@ cell_df['Average explosive'] = cell_df['Average explosive'].astype(float)
 
 
 # Define features and target variable
-feature_cols = ['Hole. dia. [mm]', 'No. Of Holes', 'Hole depth  [m]', 'Burden × Spacing [m]', 'Deck    [m]', 'Top stemming[m]', 'Average explosive', 'Total explosives weight']
+feature_cols = ['Hole. dia', 'No. Of Holes', 'Hole depth', 'Burden × Spacing', 'Deck', 'Top stemming', 'Average explosive', 'explosives weight']
 X = cell_df[feature_cols]
 y = cell_df['AOP']
 
